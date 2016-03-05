@@ -5,9 +5,9 @@ var ReactDOM = require('react-dom');
 
 var HelloUser = React.createClass({
     render: function (){
+        var name = "Herman";
+        var peeps = ['Erp', 'Derp', 'Lerp'];
         return (
-            var name = "Herman";
-            var peeps = ['Erp', 'Derp', 'Lerp']
             <div>
                 <h2>Hello, {name}</h2>
                 <ShowList names={peeps} />
