@@ -1,35 +1,48 @@
-/*jshint esnext: true */
+/* fn(d)=v render model */
+
+var USER_DATA = {
+    name: 'Charles Moss',
+    username: 'charlesamoss',
+    image : 'https://avatars3.githubusercontent.com/u/1514659?v=3&s=460'
+}
 
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var HelloUser = React.createClass({
+var ProfilePic = React.createClass({
     render: function (){
-        var name = "Herman";
-        var peeps = ['Erp', 'Derp', 'Lerp'];
+        return <img src={ this.props.imageUrl } style={{ width: 200 }} />
+    }
+});
+
+var ProfileLink = React.createClass({
+    render: function (){
         return (
             <div>
-                <h2>Hello, {name}</h2>
-                <ShowList names={peeps} />
+                <a href={'https://www.github.com/' + this.props.username }> {this.props.username} </a>
             </div>
         )
     }
 });
 
-var ShowList = React.createClass({
+var ProfileName = React.createClass({
     render: function (){
-        var listItems = this.props.names.map(function(peep){
-            return <li> {peep} </li>;
-        });
+        return (
+            <div>{this.props.name}</div>
+        )
+    }
+});
+
+var Avatar = React.createClass({
+    render: function (){
         return (
             <div>
-                <h3> Peeps </h3>
-                <ul>
-                    {listItems}
-                </ul>
+                <ProfilePic imageUrl={this.props.user.image} />
+                <ProfileName name={this.props.user.name} />
+                <ProfileLink username={this.props.user.username} />
             </div>
         )
     }
 });
 
-ReactDOM.render(<HelloUser />, document.getElementById('app'));
+ReactDOM.render(<Avatar user={USER_DATA} />, document.getElementById('app'));
