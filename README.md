@@ -3,7 +3,7 @@
 ### by [Charles Moss](https://twitter.com/CharlesMoss)
 
 ## Description
-_These are the working files I have created during the [React Fundamentals](http://www.reactjsprogram.com/) course. _
+_These are the working files I have created during the [React Fundamentals](http://www.reactjsprogram.com/) course._
 
 ## Technologies Used
 _ReactJS, Webpack, Babel_
