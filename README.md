@@ -8,6 +8,12 @@ _These are the working files I have created during the [React Fundamentals](http
 ## Technologies Used
 _ReactJS, Webpack, Babel_
 
+## Notes
+If you have Webpack installed globally:
+```
+$ export NODE_PATH="/usr/local/lib/node_modules"
+```
+
 ### Legal
 Copyright (c) 2016 Charles A Moss
 
